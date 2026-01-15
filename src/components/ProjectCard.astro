@@ -34,16 +34,16 @@ const modalId = `modal-${projectTitle.replace(/\s+/g, '-').toLowerCase()}`;
     </div>
   </div>
 
-  <div class="relative group cursor-pointer w-full md:w-52" onclick={`document.getElementById('${modalId}').showModal()`}>
-    <img 
-      class="w-full mb-5 shadow-xl rounded-lg md:mb-0 transition group-hover:brightness-50" 
-      src={images[0]} 
-      alt={`${projectTitle} image`} 
-    />
-    <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-white text-xs font-bold">
-      VER GALERÍA
-    </span>
-  </div>
+  <div class="w-full md:w-52 flex-shrink-0 cursor-pointer group relative" onclick={`document.getElementById('${modalId}').showModal()`}>
+  <img 
+    class="w-full h-auto shadow-xl rounded-lg aspect-video object-cover transition group-hover:brightness-50" 
+    src={images && images.length > 0 ? images[0] : '/favicon.svg'} 
+    alt={`${projectTitle} image`} 
+  />
+  <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition text-white text-xs font-bold bg-black/20 rounded-lg">
+    VER GALERÍA
+  </span>
+</div>
 </article>
 
 <dialog id={modalId} class="bg-transparent backdrop:backdrop-blur-md p-0 overflow-visible">
