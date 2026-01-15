@@ -53,15 +53,15 @@ const modalId = `modal-${projectTitle.replace(/\s+/g, '-').toLowerCase()}`;
 </article>
 
 <dialog id={modalId} class="bg-transparent backdrop:backdrop-blur-md p-0 overflow-visible">
-  <div class="relative max-w-4xl w-full flex flex-col items-center">
+  <div class="relative max-w-5xl w-full flex flex-col items-center">
     <button 
       onclick={`document.getElementById('${modalId}').close()`}
-      class="absolute -top-10 right-0 text-white hover:text-red-400 transition text-2xl"
+      class="absolute -top-12 right-0 md:-right-10 text-white/70 hover:text-white transition-all text-3xl"
     >
-      ✕ Cerrar
+      &times;
     </button>
 
-    <div class="carousel-container relative bg-zinc-900 p-2 rounded-lg border border-zinc-700 shadow-2xl w-[90vw] max-w-4xl aspect-video flex items-center justify-center overflow-hidden">
+    <div class="relative bg-zinc-900 rounded-xl border border-zinc-700 shadow-2xl w-[95vw] max-w-4xl aspect-video flex items-center justify-center overflow-hidden">
       {images.map((img, index) => (
         <div class={`slide-${modalId} ${index === 0 ? 'block' : 'hidden'} w-full h-full`}>
           <img 
@@ -73,15 +73,24 @@ const modalId = `modal-${projectTitle.replace(/\s+/g, '-').toLowerCase()}`;
       ))}
 
       {images.length > 1 && (
-        <>
-          <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 p-3 rounded-full text-white hover:bg-purple-600 transition z-10" onclick={`changeSlide('${modalId}', -1)`}>❮</button>
-          <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 p-3 rounded-full text-white hover:bg-purple-600 transition z-10" onclick={`changeSlide('${modalId}', 1)`}>❯</button>
-        </>
+        <div class="absolute inset-0 flex items-center justify-between px-4 pointer-events-none">
+          <button 
+            class="pointer-events-auto bg-black/40 hover:bg-purple-600/80 p-3 rounded-full text-white transition-all backdrop-blur-sm" 
+            onclick={`changeSlide('${modalId}', -1)`}
+          >
+            ❮
+          </button>
+          <button 
+            class="pointer-events-auto bg-black/40 hover:bg-purple-600/80 p-3 rounded-full text-white transition-all backdrop-blur-sm" 
+            onclick={`changeSlide('${modalId}', 1)`}
+          >
+            ❯
+          </button>
+        </div>
       )}
     </div>
   </div>
 </dialog>
-
 <script is:inline>
   if (typeof window.indices === 'undefined') window.indices = {};
   
