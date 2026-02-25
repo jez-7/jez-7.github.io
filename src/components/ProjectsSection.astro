@@ -23,7 +23,7 @@ import Docker from "@assets/icons/docker.astro";
   <hr class="mb-6 border-zinc-600">
 
   <ProjectCard projectTitle="Groove Records" 
-  projectDescription="E-commerce en el cual se venden CDs y vinilos. El proyecto es una API Rest realizada en Java con Spring Boot. Se implementan herramientas como JWT, Spring Security y la API de Mercado Pago para simular compras."
+  projectDescription="E-commerce en el cual se venden CDs y vinilos. El proyecto es una API Rest realizada en Java con Spring Boot. Se implementan herramientas como JWT, Spring Security y la API de Mercado Pago para simular compras. Proyecto dockerizado y deployeado en Render (Al ser un plan gratuito la app se "duerme" y demora en iniciarse, por eso para poder usarla, hay que esperar unos minutos)"
    projectLink="https://groove-records-nag2.onrender.com/index.html" githubLink="https://github.com/jez-7/GrooveRecords" 
    images={["/images/groover.png", "/images/groove-2.png", "/images/groove-3.png", "/images/groove-4.png", "/images/groove-5.png", "/images/groove-6.png", "/images/groove-7.png", "/images/groove-8.png", "/images/groove-9.png"]}>
     <Java />
@@ -33,6 +33,23 @@ import Docker from "@assets/icons/docker.astro";
     <HTML />
     <JavaScript />
     <CSS />
+    <Docker />
+
+  </ProjectCard>
+
+  <ProjectCard projectTitle="Omniscan" 
+  projectDescription="Sistema de alta frecuencia diseñado para el escaneo y análisis de productos en tiempo real. La arquitectura está completamente desacoplada mediante Kafka, lo que permite un flujo de datos asincrónico desde la captura del precio hasta la detección de anomalías mediante Sliding Windows.
+
+   Desarrollado en Java 21 y Spring Boot 4, utilizando Redis como capa de persistencia volátil para alta velocidad y Kafka como eje de mensajería. Implementé un ciclo de CI/CD con GitHub Actions, integrando SonarQube Cloud para asegurar la calidad del código y Docker Hub para la distribución de imágenes."
+   projectLink=" " githubLink="https://github.com/jez-7/Omniscan-Backend" 
+   images={["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg", "/images/img4.jpg"]}>
+    <Java />
+    <Spring />
+    <https://skillicons.dev/icons?i=mongodb />
+    <https://skillicons.dev/icons?i=redis />
+    <https://skillicons.dev/icons?i=kafka />
+    <https://skillicons.dev/icons?i=junit />
+    <https://skillicons.dev/icons?i=githubactions />
     <Docker />
 
   </ProjectCard>
