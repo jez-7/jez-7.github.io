@@ -37,19 +37,20 @@ import Docker from "@assets/icons/docker.astro";
 
   </ProjectCard>
 
-  <ProjectCard projectTitle="Omniscan" 
-  projectDescription="Sistema de alta frecuencia diseñado para el escaneo y análisis de productos en tiempo real. La arquitectura está completamente desacoplada mediante Kafka, lo que permite un flujo de datos asincrónico desde la captura del precio hasta la detección de anomalías mediante Sliding Windows. Desarrollado en Java 21 y Spring Boot 4, utilizando Redis como capa de persistencia volátil para alta velocidad y Kafka como eje de mensajería. Implementé un ciclo de CI/CD con GitHub Actions, integrando SonarQube Cloud para asegurar la calidad del código y Docker Hub para la distribución de imágenes."
-  githubLink="https://github.com/jez-7/Omniscan-Backend" images={["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg", "/images/img4.jpg"]}>
+  <ProjectCard 
+  projectTitle="Omniscan" 
+  projectDescription="Sistema de alta frecuencia diseñado para el escaneo y análisis de productos en tiempo real. La arquitectura está completamente desacoplada mediante Kafka, lo que permite un flujo de datos asincrónico desde la captura del precio hasta la detección de anomalías mediante Sliding Windows. Desarrollado en Java 21 y Spring Boot, utilizando Redis como capa de persistencia volátil para alta velocidad y Kafka como eje de mensajería. Implementé un ciclo de CI/CD con GitHub Actions, integrando SonarQube Cloud para asegurar la calidad del código y Docker Hub para la distribución de imágenes."
+  githubLink="https://github.com/jez-7/Omniscan-Backend" 
+  images={["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg", "/images/img4.jpg"]}>
     <Java />
     <Spring />
-    <https://skillicons.dev/icons?i=mongodb />
-    <https://skillicons.dev/icons?i=redis />
-    <https://skillicons.dev/icons?i=kafka />
-    <https://skillicons.dev/icons?i=junit />
-    <https://skillicons.dev/icons?i=githubactions />
+    <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" />
+    <img src="https://skillicons.dev/icons?i=redis" alt="Redis" />
+    <img src="https://skillicons.dev/icons?i=kafka" alt="Kafka" />
+    <img src="https://skillicons.dev/icons?i=junit" alt="JUnit" />
+    <img src="https://skillicons.dev/icons?i=githubactions" alt="GitHub Actions" />
     <Docker />
-
-  </ProjectCard>
+</ProjectCard>
 
   <ProjectCard projectTitle="App Turnos" 
 projectDescription="Sistema de gestión de turnos compuesto por una API REST con Spring Boot y una aplicación móvil nativa desarrollada en Android. El frontend móvil utiliza Jetpack Compose para construir una interfaz moderna, estructurada bajo la arquitectura MVVM. La app se comunica con el backend mediante JWT y Spring Security, permitiendo la sincronización de datos en tiempo real, la gestión de estados de reserva y una navegación fluida." 
