@@ -42,14 +42,16 @@ import Docker from "@assets/icons/docker.astro";
   projectDescription="Sistema de alta frecuencia diseñado para el escaneo y análisis de productos en tiempo real. La arquitectura está completamente desacoplada mediante Kafka, lo que permite un flujo de datos asincrónico desde la captura del precio hasta la detección de anomalías mediante Sliding Windows. Desarrollado en Java 21 y Spring Boot, utilizando Redis como capa de persistencia volátil para alta velocidad y Kafka como eje de mensajería. Implementé un ciclo de CI/CD con GitHub Actions, integrando SonarQube Cloud para asegurar la calidad del código y Docker Hub para la distribución de imágenes."
   githubLink="https://github.com/jez-7/Omniscan-Backend" 
   images={["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg", "/images/img4.jpg"]}>
-    <Java />
-    <Spring />
-    <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" />
-    <img src="https://skillicons.dev/icons?i=redis" alt="Redis" />
-    <img src="https://skillicons.dev/icons?i=kafka" alt="Kafka" />
-    <img src="https://skillicons.dev/icons?i=junit" alt="JUnit" />
-    <img src="https://skillicons.dev/icons?i=githubactions" alt="GitHub Actions" />
-    <Docker />
+    <div class="flex flex-wrap gap-3 items-center mt-4">
+    <Java class="w-8 h-8" />
+    <Spring class="w-8 h-8" />
+    <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" class="w-8 h-8" />
+    <img src="https://skillicons.dev/icons?i=redis" alt="Redis" class="w-8 h-8" />
+    <img src="https://skillicons.dev/icons?i=kafka" alt="Kafka" class="w-8 h-8" />
+    <img src="https://skillicons.dev/icons?i=junit" alt="JUnit" class="w-8 h-8" />
+    <img src="https://skillicons.dev/icons?i=githubactions" alt="GitHub Actions" class="w-8 h-8" />
+    <Docker class="w-8 h-8" />
+  </div>
 </ProjectCard>
 
   <ProjectCard projectTitle="App Turnos" 
